@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Game</title>
+</head>
+<body style="background-color: rgb(104, 109, 182);">
+    <h1>Number Game</h1>
+    <div class="card" style="width: 18rem;">
+        <img src="working img/pic.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <input type="number" id="guess" placeholder="Enter your guess" />
+            <button onclick="checkGuess()">Guess</button>
+        </div>
+      </div>
+    </div>
+    <script>
+        let secretNumber = Math.floor(Math.random() * 100) + 1;
+        
+
+        function checkGuess() {
+            const userGuess = parseInt(document.getElementById('guess').value);
+
+            if (userGuess < secretNumber) {
+                alert("Too low! Try again.");
+            } else if (userGuess > secretNumber) {
+                alert("Too high! Try again.");
+            } else {
+              alert("Congratulations! You've guessed the number");
+            }
+        }
+    </script>
+
+   
+
+    <script src="script.js"></script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
